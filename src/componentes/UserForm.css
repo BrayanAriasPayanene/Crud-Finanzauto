@@ -1,0 +1,76 @@
+/* src/components/UserForm.css */
+.form-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.form-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 18px;
+}
+
+.input-group input {
+  width: calc(100% - 30px); /* Ajusta el ancho para el ícono */
+  padding: 12px 15px 12px 45px; /* Ajusta el padding para el ícono */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #555;
+  transition: all 0.3s ease;
+  box-sizing: border-box; /* Incluye padding y border en el width */
+}
+
+.input-group input:focus {
+  border-color: #A5D431;
+  box-shadow: 0 0 8px rgba(165, 212, 49, 0.3);
+  outline: none;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to right, #A5D431, #72ae46); /* Degradado verde */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Espacio entre icono y texto */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.submit-button:hover {
+  background: linear-gradient(to right, #72ae46, #A5D431); /* Invierte el degradado al hover */
+  transform: translateY(-2px);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}

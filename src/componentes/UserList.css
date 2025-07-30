@@ -1,0 +1,89 @@
+/* src/components/UserList.css */
+.user-list-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.user-list-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.user-table th, .user-table td {
+  border: 1px solid #eee;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.user-table th {
+  background-color: #f8f8f8;
+  color: #555;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.user-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.user-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.actions-cell {
+  white-space: nowrap; /* Evita que los botones se rompan en línea */
+  text-align: center;
+}
+
+.actions-cell button {
+  padding: 8px 12px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button {
+  background-color: #A5D431; /* Verde similar al botón Crear */
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #72ae46;
+}
+
+.delete-button {
+  background-color: #e74c3c; /* Rojo para eliminar */
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+.user-list-container p {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  margin-top: 20px;
+}

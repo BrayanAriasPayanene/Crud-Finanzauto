@@ -1,13 +1,222 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.contenedor-Finanzauto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  border-bottom: 2px solid #e0e0e0;
+  box-shadow: 0 1px 4px rgb(0, 0, 0, 0.1);
+  width: 100%;
+  font-family: Arial, sans-serif;
+  padding: 0px;  
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.logo-barra{
+  padding: 16px 20px;
+  width: 95%;
+  text-align: left;
+  box-sizing: border-box;
 }
+
+.sub-barra {
+    background-color: #166d6b;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Asegúrate de que ocupe todo el ancho */
+    box-sizing: border-box;
+}
+
+/* 🧱 Nuevo Menú de Navegación Web */
+.main-nav {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center; /* **CAMBIO CLAVE: Centra el contenido de main-nav** */
+    align-items: center;
+    padding: 10px 0;
+    z-index: 999;
+    position: sticky;
+    top: 0; /* Si es sticky o fixed, define su posición superior */
+}
+
+.menu-web {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* justify-content: space-around; */ /* COMENTAR O ELIMINAR: Esto causaba distribución */
+    justify-content: center; /* **CAMBIO CLAVE: Centra los elementos de la lista ul** */
+    align-items: center;
+    /* width: 100%; */ /* COMENTAR O ELIMINAR: Deja que el contenido determine el ancho o usa max-width */
+    gap: 330px; /* **NUEVO: Añade espacio entre los elementos del menú** */
+    /* Puedes ajustar este valor de 'gap' para controlar el espaciado entre los elementos */
+}
+
+.menu-web li {
+    /* flex-grow: 1; */ /* COMENTAR O ELIMINAR: Esto hace que los elementos crezcan y puede desalinear */
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 0;
+    /* Opcional: si el gap no es suficiente, puedes usar margin-left/right para más control */
+    /* margin: 0 15px; */
+}
+
+.menu-web li a {
+    text-decoration: none;
+    color: #7a7a7a; /* Color de los iconos y texto */
+    display: flex; /* Para alinear icono y texto horizontalmente */
+    flex-direction: column; /* Para poner icono encima de texto */
+    align-items: center; /* Centra icono y texto */
+    transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+.menu-web li a:hover {
+    color: #A5D431; /* Color al pasar el ratón */
+}
+
+/* Estilos para los iconos dentro de los enlaces */
+.menu-web li a svg {
+    font-size: 24px; /* Tamaño de los iconos */
+    margin-bottom: 5px; /* Espacio entre icono y texto */
+}
+
+/* ⭕ Botón central sobresaliente en el menú web */
+.boton-central-web {
+    width: 60px;
+    height: 60px;
+    background-color: #A5D431;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -30px; /* Esto lo sube hacia arriba */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1001;
+    text-decoration: none !important;
+    /* Ajustes específicos si el botón parece no estar perfectamente centrado horizontalmente */
+    /* Transform: translateX(-50%); */ /* Si necesitas un ajuste muy fino basado en su propio ancho */
+    /* Left: 50%; */
+    position: relative; /* Asegura que margin-top funcione correctamente con flexbox */
+}
+
+.boton-central-web svg {
+    margin-bottom: 0px; /* No espacio adicional si es solo el icono */
+}
+
+.imagen-finanzauto {
+  width: 250px;
+  height: auto;
+}
+
+.sub-barra {
+  background-color: #166d6b;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;  
+  
+}
+
+.menu li {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.menu li.active {
+  color: #72ae46;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.menu-icon {
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.contenido {
+  padding: 20px;
+}
+
+/* 🧱 Barra inferior */
+.barra-inferior {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background-color: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 10px;
+  z-index: 1000;
+}
+
+/* 📍 Iconos laterales */
+.icono-nav {
+  font-size: 24px;
+  color: #7a7a7a;
+  cursor: pointer;
+}
+
+/* ⭕ Botón central sobresaliente */
+.boton-central {
+  width: 60px;
+  height: 60px;
+  background-color: #A5D431; /* Verde */
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -30px; /* Esto lo sube hacia arriba */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.boton-central-web svg {
+    margin-bottom: 0px; /* No espacio adicional si es solo el icono */
+}
+
+
+/* Si tenías la barra inferior para móvil, y quieres mantenerla para pantallas pequeñas,
+   entonces la vuelves a colocar en App.js y usas media queries. Ejemplo: */
+ @media (max-width: 768px) {
+    .main-nav {
+        display: none;  }
+    }
+    .barra-inferior {
+        display: flex;  
+    }
+
+
+@media (min-width: 769px) {
+    .barra-inferior {
+        display: none;  
+    }
+}
+
